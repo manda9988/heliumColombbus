@@ -16,6 +16,9 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 1000;
+  position: relative;
+  cursor: none;
 }
 a:hover {
   font-size: 1.3rem;
@@ -27,12 +30,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  cursor: none;
 }
 
 .mouse {
   position: absolute;
   border-radius: 1500px;
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
 }
 #cursor {
   background: #2128bd;
@@ -40,14 +45,16 @@ body {
   height: 14px;
 }
 #mouse1 {
-  height: 100px;
-  width: 100px;
+  height: 36px;
+  width: 36px;
   background: white;
+  transition: 0.1s ease;
 }
 #mouse2 {
-  height: 200px;
-  width: 200px;
+  height: 68px;
+  width: 68px;
   background: rgb(41, 41, 41);
+  transition: 0.14s ease;
 }
 
 nav {
